@@ -35,6 +35,8 @@ html {
   display: none;
 }
 :root {
+  --layout-direction: rtl;
+  --placeholder-direction: end;
   --color-accent: #bd202d;
   --color-light-gray: #f9f9f9;
   --color-offlight-gray: #ededed;

@@ -31,11 +31,11 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   user-select: none;
-  transition: 0.2s 0.1s ease;
-  -webkit-transition: 0.2s 0.1s ease;
-  -moz-transition: 0.2s 0.1s ease;
-  -ms-transition: 0.2s 0.1s ease;
-  -o-transition: 0.2s 0.1s ease;
+  transition: 0.15s ease;
+  -webkit-transition: 0.15s ease;
+  -moz-transition: 0.15s ease;
+  -ms-transition: 0.15s ease;
+  -o-transition: 0.15s ease;
 }
 .nav_link svg {
   width: 25px;

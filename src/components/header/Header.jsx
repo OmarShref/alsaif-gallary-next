@@ -1,22 +1,32 @@
+"use client";
 import styles from "./Header.module.css";
-// import useLanguageStore from "../../stores/languageStore";
-// import { useEffect } from "react";
+import useLanguageStore from "../../stores/languageStore";
+import { useEffect } from "react";
 
 const Header = () => {
-  // const language = useLanguageStore((state) => state.language);
-  // useEffect(() => {
-  //   if (language === "ar") {
-  //     document.documentElement.style.setProperty(
-  //       "--placeholder-direction",
-  //       "end"
-  //     );
-  //   } else if (language === "en") {
-  //     document.documentElement.style.setProperty(
-  //       "--placeholder-direction",
-  //       "start"
-  //     );
-  //   }
-  // }, [language]);
+  const language = useLanguageStore((state) => state.language);
+  useEffect(() => {
+    // change layout direction according to language selected
+    if (language === "en") {
+      document.documentElement.style.setProperty("--layout-direction", "ltr");
+      document.documentElement.style.setProperty(
+        "--placeholder-direction",
+        "start"
+      );
+    } else if (language === "ar") {
+      document.documentElement.style.setProperty("--layout-direction", "rtl");
+      document.documentElement.style.setProperty(
+        "--placeholder-direction",
+        "end"
+      );
+    } else {
+      document.documentElement.style.setProperty("--layout-direction", "rtl");
+      document.documentElement.style.setProperty(
+        "--placeholder-direction",
+        "end"
+      );
+    }
+  }, [language]);
   return (
     <>
       <div className={styles.container}>
@@ -58,13 +68,13 @@ const Header = () => {
           <input
             type="text"
             dir="auto"
-            // placeholder={`${
-            //   language === "ar"
-            //     ? "وش اللي في خاطرك"
-            //     : language === "en"
-            //     ? "What are you looking for?"
-            //     : "وش اللي في خاطرك"
-            // }`}
+            placeholder={`${
+              language === "ar"
+                ? "وش اللي في خاطرك"
+                : language === "en"
+                ? "What are you looking for?"
+                : "وش اللي في خاطرك"
+            }`}
           />
           {/* search icon  */}
           <svg
