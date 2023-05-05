@@ -1,5 +1,7 @@
 import CategoriesSideMenu from "@/components/categories-sidemenu/CategoriesSideMenu";
 import styles from "./page.module.css";
+import { Suspense } from "react";
+import loadingGif from "../../assets/loading.gif";
 
 export const metadata = {
   title: "Alsaif Gallary Categories",
@@ -41,7 +43,6 @@ const getCategoriesData = async () => {
   }
   `,
     }),
-    cache: "no-store",
   });
   return res.json();
 };
@@ -51,7 +52,23 @@ const Layout = async ({ children }) => {
   return (
     <div className={styles.container}>
       <div className={styles.contents}>
-        <CategoriesSideMenu data={data.data} />
+        <Suspense
+          fallback={
+            <div
+              style={{
+                position: "fixed",
+                inset: "0px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <img src={loadingGif} alt="loading gif" width="120" />
+            </div>
+          }
+        >
+          <CategoriesSideMenu data={data.data} />
+        </Suspense>
         {children}
         {/* <Outlet context={[itemChildren, bannerUrl, categoryName]} /> */}
       </div>
