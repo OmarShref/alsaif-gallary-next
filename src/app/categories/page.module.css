@@ -1,5 +1,11 @@
 .container {
   flex-grow: 1;
-  overflow: scroll;
-  padding-bottom: 100px;
+  overflow: hidden;
+  padding-bottom: 77px;
+}
+.contents {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 96px 1fr;
 }
