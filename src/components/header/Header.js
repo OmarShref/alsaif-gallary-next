@@ -1,11 +1,13 @@
 "use client";
 import styles from "./Header.module.css";
 import useLanguageStore from "../../stores/languageStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const language = useLanguageStore((state) => state.language);
+  const { language } = useLanguageStore();
+  const [languageState, setLanguageState] = useState("");
   useEffect(() => {
+    setLanguageState(language);
     // change layout direction according to language selected
     if (language === "en") {
       document.documentElement.style.setProperty("--layout-direction", "ltr");
@@ -69,9 +71,9 @@ const Header = () => {
             type="text"
             dir="auto"
             placeholder={`${
-              language === "ar"
+              languageState === "ar"
                 ? "وش اللي في خاطرك"
-                : language === "en"
+                : languageState === "en"
                 ? "What are you looking for?"
                 : "وش اللي في خاطرك"
             }`}

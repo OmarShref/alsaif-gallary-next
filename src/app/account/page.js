@@ -1,18 +1,23 @@
 "use client";
 import styles from "./page.module.css";
 import useLanguageStore from "../../stores/languageStore";
+import { useState, useEffect } from "react";
 
 const Page = () => {
-  const language = useLanguageStore((state) => state.language);
-  const changeToEnglish = useLanguageStore(
-    (state) => state.setLanguageToEnglish
-  );
-  const changeToArabic = useLanguageStore((state) => state.setLanguageToArabic);
+  const { language } = useLanguageStore();
+  const [languageState, setLanguageState] = useState("");
+  useEffect(() => {
+    setLanguageState(language);
+  }, [language]);
   return (
     <div className={styles.container}>
-      <p>{language}</p>
-      <button onClick={() => changeToEnglish()}>change to english</button>
-      <button onClick={() => changeToArabic()}>change to arabic</button>
+      <p>{languageState}</p>
+      <button onClick={() => useLanguageStore.setState({ language: "en" })}>
+        change to english
+      </button>
+      <button onClick={() => useLanguageStore.setState({ language: "ar" })}>
+        change to arabic
+      </button>
     </div>
   );
 };

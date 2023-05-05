@@ -1,12 +1,14 @@
 "use client";
 import styles from "./NavigationBar.module.css";
 import useLanguageStore from "../../stores/languageStore";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NavigationBar = () => {
-  const language = useLanguageStore((state) => state.language);
+  const { language } = useLanguageStore();
+  const [languageState, setLanguageState] = useState("");
+
   const pathname = usePathname();
 
   useEffect(() => {
@@ -24,6 +26,7 @@ const NavigationBar = () => {
   }, []);
 
   useEffect(() => {
+    setLanguageState(language);
     // to change indicator movement with the language change
     // get the moving span
     const activeIndicator = document.getElementById(
@@ -99,9 +102,9 @@ const NavigationBar = () => {
             />
           </svg>
           <span>{`${
-            language === "ar"
+            languageState === "ar"
               ? "الرئيسية"
-              : language === "en"
+              : languageState === "en"
               ? "Home"
               : "الرئيسية"
           }`}</span>
@@ -133,9 +136,9 @@ const NavigationBar = () => {
             />
           </svg>
           <span>{`${
-            language === "ar"
+            languageState === "ar"
               ? "الفئات"
-              : language === "en"
+              : languageState === "en"
               ? "Categories"
               : "الفئات"
           }`}</span>
@@ -167,9 +170,9 @@ const NavigationBar = () => {
             />
           </svg>
           <span>{`${
-            language === "ar"
+            languageState === "ar"
               ? "عربة التسوق"
-              : language === "en"
+              : languageState === "en"
               ? "Cart"
               : "عربة التسوق"
           }`}</span>
@@ -206,9 +209,9 @@ const NavigationBar = () => {
             />
           </svg>
           <span>{`${
-            language === "ar"
+            languageState === "ar"
               ? "العروض"
-              : language === "en"
+              : languageState === "en"
               ? "Offers"
               : "العروض"
           }`}</span>
@@ -240,9 +243,9 @@ const NavigationBar = () => {
             />
           </svg>
           <span>{`${
-            language === "ar"
+            languageState === "ar"
               ? "حسابي"
-              : language === "en"
+              : languageState === "en"
               ? "Account"
               : "حسابي"
           }`}</span>
