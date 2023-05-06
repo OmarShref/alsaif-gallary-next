@@ -181,7 +181,32 @@ const NavigationBar = () => {
             pathname.includes("/offers") ? styles.active_link : ""
           } `}
         >
-          offers
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="#646464"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"
+            />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 6h.008v.008H6V6z"
+            />
+          </svg>
+          <span>{`${
+            languageState === "ar"
+              ? "العروض"
+              : languageState === "en"
+              ? "Offers"
+              : "العروض"
+          }`}</span>
         </Link>
       </div>
 
@@ -189,7 +214,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/account"
-          shallow={true}
           className={`${styles.nav_link} ${
             pathname.includes("/account") ? styles.active_link : ""
           } `}
