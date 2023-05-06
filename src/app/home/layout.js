@@ -8,7 +8,39 @@ export const metadata = {
 const Layout = ({ children }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.contents}>{children}</div>
+      <p>foooooooooooo</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>dskjflksjfljs</p>
+      <p>fooooooooooo</p>
+      {children}
     </div>
   );
 };
