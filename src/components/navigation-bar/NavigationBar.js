@@ -83,9 +83,9 @@ const NavigationBar = () => {
           href="/home"
           replace
           className={
-            pathname.toLowerCase().includes("/home")
-              ? `${styles.nav_link} ${styles.active_link}`
-              : `${styles.nav_link}`
+            `${styles.nav_link} ` + pathname.includes("/home")
+              ? `${styles.active_link}`
+              : ""
           }
         >
           <svg
@@ -118,9 +118,9 @@ const NavigationBar = () => {
           href="/categories"
           replace
           className={
-            pathname.toLowerCase().includes("/categories")
-              ? `${styles.nav_link} ${styles.active_link}`
-              : `${styles.nav_link}`
+            `${styles.nav_link} ` + pathname.includes("/categories")
+              ? `${styles.active_link}`
+              : ""
           }
         >
           <svg
@@ -153,9 +153,9 @@ const NavigationBar = () => {
           href="/cart"
           replace
           className={
-            pathname.toLowerCase().includes("/cart")
-              ? `${styles.nav_link} ${styles.active_link}`
-              : `${styles.nav_link}`
+            `${styles.nav_link} ` + pathname.includes("/cart")
+              ? `${styles.active_link}`
+              : ""
           }
         >
           <svg
@@ -188,9 +188,9 @@ const NavigationBar = () => {
           href="/offers"
           replace
           className={
-            pathname.toLowerCase().includes("/offers")
-              ? `${styles.nav_link} ${styles.active_link}`
-              : `${styles.nav_link}`
+            `${styles.nav_link} ` + pathname.includes("/offers")
+              ? `${styles.active_link}`
+              : ""
           }
         >
           <svg
@@ -228,9 +228,9 @@ const NavigationBar = () => {
           href="/account"
           replace
           className={
-            pathname.toLowerCase().includes("/account")
-              ? `${styles.nav_link} ${styles.active_link}`
-              : `${styles.nav_link}`
+            `${styles.nav_link} ` + pathname.includes("/account")
+              ? `${styles.active_link}`
+              : ""
           }
         >
           <svg
