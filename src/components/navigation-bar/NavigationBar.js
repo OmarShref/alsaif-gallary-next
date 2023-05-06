@@ -81,7 +81,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/home"
-          replace
           className={
             `${styles.nav_link} ` + pathname.includes("/home")
               ? `${styles.active_link}`
@@ -116,7 +115,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/categories"
-          replace
           className={
             `${styles.nav_link} ` + pathname.includes("/categories")
               ? `${styles.active_link}`
@@ -151,7 +149,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/cart"
-          replace
           className={
             `${styles.nav_link} ` + pathname.includes("/cart")
               ? `${styles.active_link}`
@@ -186,7 +183,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/offers"
-          replace
           className={
             `${styles.nav_link} ` + pathname.includes("/offers")
               ? `${styles.active_link}`
@@ -226,7 +222,6 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/account"
-          replace
           className={
             `${styles.nav_link} ` + pathname.includes("/account")
               ? `${styles.active_link}`
