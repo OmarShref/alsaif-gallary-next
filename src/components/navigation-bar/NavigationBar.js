@@ -81,11 +81,9 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/home"
-          className={
-            `${styles.nav_link} ` + pathname.includes("/home")
-              ? `${styles.active_link}`
-              : ""
-          }
+          className={`${styles.nav_link} ${
+            pathname.includes("/home") ? styles.active_link : ""
+          } `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +113,9 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/categories"
-          className={
-            `${styles.nav_link} ` + pathname.includes("/categories")
-              ? `${styles.active_link}`
-              : ""
-          }
+          className={`${styles.nav_link} ${
+            pathname.includes("/categories") ? styles.active_link : ""
+          } `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -149,11 +145,9 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/cart"
-          className={
-            `${styles.nav_link} ` + pathname.includes("/cart")
-              ? `${styles.active_link}`
-              : ""
-          }
+          className={`${styles.nav_link} ${
+            pathname.includes("/cart") ? styles.active_link : ""
+          } `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -183,11 +177,9 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/offers"
-          className={
-            `${styles.nav_link} ` + pathname.includes("/offers")
-              ? `${styles.active_link}`
-              : ""
-          }
+          className={`${styles.nav_link} ${
+            pathname.includes("/offers") ? styles.active_link : ""
+          } `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -222,11 +214,9 @@ const NavigationBar = () => {
       <div className={styles.grid_col}>
         <Link
           href="/account"
-          className={
-            `${styles.nav_link} ` + pathname.includes("/account")
-              ? `${styles.active_link}`
-              : ""
-          }
+          className={`${styles.nav_link} ${
+            pathname.includes("/account") ? styles.active_link : ""
+          } `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
