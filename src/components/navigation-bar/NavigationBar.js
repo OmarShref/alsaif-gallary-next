@@ -80,7 +80,7 @@ const NavigationBar = () => {
       {/* home link  */}
       <div className={styles.grid_col}>
         <Link
-          href="/home"
+          href="home"
           className={`${styles.nav_link} ${
             pathname.includes("/home") ? styles.active_link : ""
           } `}
@@ -112,7 +112,7 @@ const NavigationBar = () => {
       {/* categories link  */}
       <div className={styles.grid_col}>
         <Link
-          href="/categories"
+          href="categories"
           className={`${styles.nav_link} ${
             pathname.includes("/categories") ? styles.active_link : ""
           } `}
@@ -144,7 +144,7 @@ const NavigationBar = () => {
       {/* shopping cart link  */}
       <div className={styles.grid_col}>
         <Link
-          href="/cart"
+          href="cart"
           className={`${styles.nav_link} ${
             pathname.includes("/cart") ? styles.active_link : ""
           } `}
@@ -176,7 +176,7 @@ const NavigationBar = () => {
       {/* offes link  */}
       <div className={styles.grid_col}>
         <Link
-          href="/offers"
+          href="offers"
           className={`${styles.nav_link} ${
             pathname.includes("/offers") ? styles.active_link : ""
           } `}
@@ -213,7 +213,7 @@ const NavigationBar = () => {
       {/* account link  */}
       <div className={styles.grid_col}>
         <Link
-          href="/account"
+          href="account"
           className={`${styles.nav_link} ${
             pathname.includes("/account") ? styles.active_link : ""
           } `}
