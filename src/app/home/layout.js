@@ -44,7 +44,8 @@ const getCategoriesData = async () => {
   return res.json();
 };
 
-const Layout = ({ children }) => {
+const Layout = async ({ children }) => {
+  const data = await getCategoriesData();
   return (
     <div className={styles.container}>
       <p>foooooooooooo</p>
